@@ -1,0 +1,42 @@
+container {
+  width: 100%;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+#catlistcontainer{
+  width: 30em;
+  height: 20em;
+  border: 1px solid black;
+  margin-bottom: 2px;
+}
+
+li{
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+#catdetailscontainer{
+  width: 30em;
+  height: 35em;
+  border: 1px solid black;
+}
+
+span{
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cat-entry{
+  margin-bottom: 2px;
+}
+
+#catimage{
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 470px;
+  height: 500px;
+}
