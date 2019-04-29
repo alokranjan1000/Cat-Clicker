@@ -1,14 +1,18 @@
-container {
+.container {
   width: 100%;
   /* display: flex;
   flex-wrap: wrap; */
 }
 
-#catlistcontainer{
+.catlistcontainer{
   width: 30em;
   height: 20em;
   border: 1px solid black;
   margin-bottom: 2px;
+}
+
+.catlist{
+  list-style: none;
 }
 
 li{

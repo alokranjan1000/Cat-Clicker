@@ -8,7 +8,27 @@ const model = [
     {
         name: "Arti",
         image: "./img/cattwo.jpg",
-        clicks: 3
+        clicks: 0
+    },
+    {
+        name: "Alka",
+        image: "./img/catthree.jpg",
+        clicks: 0
+    },
+    {
+        name: "Anuja",
+        image: "./img/catfour.jpg",
+        clicks: 0
+    },
+    {
+        name: "Akash",
+        image: "./img/catfive.jpg",
+        clicks: 0
+    },
+    {
+        name: "Aditi",
+        image: "./img/catsix.jpg",
+        clicks: 0
     }
 ]
 
@@ -17,6 +37,8 @@ const octopus = function(){
     var selectedCat = model[0];
 
     function init(){
+        listView.render(model);
+        listView.init();
         catView.init();
         catView.render(selectedCat);
     }
@@ -25,9 +47,18 @@ const octopus = function(){
         selectedCat.clicks++;
         catView.render(selectedCat);
     }
+
+    function updateCurrentCat(name){
+        selectedCat = model.find((cat)=>{
+            return cat.name === name;
+        });
+        catView.render(selectedCat);
+    }
+
     return {
         init: init,
-        catWasClicked: catWasClicked
+        catWasClicked: catWasClicked,
+        updateCurrentCat: updateCurrentCat
     }
 }();
 
@@ -52,6 +83,29 @@ const catView = function(){
     return {
         render: render,
         init: init
+    }
+}();
+
+const listView = function(){
+    const listDisplay = document.querySelector(".catlist");
+
+    function init(){
+        listDisplay.addEventListener("click", function(e){
+            console.log(e.target.textContent);
+            octopus.updateCurrentCat(e.target.textContent);
+        })
+    }
+
+    function render(cats){
+        listDisplay.innerHTML = '';
+        cats.forEach((cat)=>{
+            listDisplay.innerHTML += `<li class ="cat_list">${cat.name}</li>`;
+        })
+    }
+
+    return{
+        render,
+        init
     }
 }();
 
