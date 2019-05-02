@@ -74,9 +74,9 @@ const catView = function(){
     function render(cat){
         catDisplay.innerHTML = `
             <img src = "${cat.image}" alt="Cat Image" id= "catimage">
-            <span>Name of the cat: </span>
+            <span>Cat Name: </span>
             <span class= "cat-name">${cat.name}</span><br>
-            <span>Number of clicks on this cat: </span>
+            <span>Number of clicks: </span>
             <span class="click-count">${cat.clicks}</span>`;
     }
 
@@ -91,7 +91,7 @@ const listView = function(){
 
     function init(){
         listDisplay.addEventListener("click", function(e){
-            console.log(e.target.textContent);
+            // console.log(e.target.textContent);
             octopus.updateCurrentCat(e.target.textContent);
         })
     }

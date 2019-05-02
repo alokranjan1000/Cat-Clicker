@@ -1,42 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #dedede;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
 .container {
-  width: 100%;
-  /* display: flex;
-  flex-wrap: wrap; */
+    display: flex;
+    height: 100%;
 }
 
 .catlistcontainer{
-  width: 30em;
-  height: 20em;
-  border: 1px solid black;
-  margin-bottom: 2px;
+    flex-basis: 20%;
+    background-color: #efefef;
+    height: 100vh;
+}
+
+h1, h2{
+    text-align: center;
+    font-family: 'Gaegu', cursive;
 }
 
 .catlist{
-  list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-li{
-  font-family: arial;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 2px;
+.cat_list--selected{
+  background-color: #3240bd;
+  color: #fff;
+  font-weight: 600;
 }
+
+.cat_list{
+  font-family: 'Gaegu', cursive;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.cat_list:hover{
+  background-color: #fff;
+  cursor: pointer;
+  color: #000;
+}
+
 
 #catdetailscontainer{
-  width: 30em;
-  height: 35em;
-  border: 1px solid black;
-}
-
-span{
-  font-family: arial;
-  font-size: 15px;
-  font-weight: bold;
+  flex-basis: 75vh;
 }
 
 .cat-entry{
-  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 400px;
+  margin: 0 auto;
 }
+
+span{
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
 
 #catimage{
   margin-top: 5px;
